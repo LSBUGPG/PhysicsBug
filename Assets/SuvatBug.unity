@@ -337,8 +337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correct: 1
   body: {fileID: 750923581}
-  force: -9.81
-  mass: 1
 --- !u!54 &750923581
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -593,8 +591,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correct: 0
   body: {fileID: 1794046899}
-  force: -9.81
-  mass: 1
 --- !u!54 &1794046899
 Rigidbody:
   m_ObjectHideFlags: 0

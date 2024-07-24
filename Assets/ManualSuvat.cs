@@ -5,8 +5,6 @@ public class ManualSuvat : MonoBehaviour
 {
 	public bool correct = true;
 	public Rigidbody body;
-	public float force = 1f;
-	public float mass = 1f;
 	bool go = false;
 	float u = 0.0f;
 	float peak = 0.0f;
@@ -23,10 +21,10 @@ public class ManualSuvat : MonoBehaviour
 	{
 		if (go)
 		{
-			Debug.Log($"{name} {Time.time}s {body.position.y}m", gameObject);
+			//Debug.Log($"{name} {Time.time}s {body.position.y}m", gameObject);
 			float dt = Time.fixedDeltaTime;
 			float s;
-			float a = force / mass;
+			float a = Physics.gravity.y;
 			if (correct)
 			{
 				// s = ut + ½at²

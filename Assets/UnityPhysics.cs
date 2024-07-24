@@ -11,7 +11,7 @@ public class UnityPhysics : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1.0f);
 		go = true;
-		float force = Mathf.Sqrt(-2.0f * Physics.gravity.y * 10.0f * body.mass);
+		float force = Mathf.Sqrt(-2.0f * Physics.gravity.y * 10.0f) * body.mass;
 		body.AddForce(Vector3.up * force, ForceMode.Impulse);
 	}
 
@@ -19,7 +19,7 @@ public class UnityPhysics : MonoBehaviour
 	{
 		if (go)
 		{
-			Debug.Log($"{name} {Time.time}s {body.position.y}m", gameObject);
+			//Debug.Log($"{name} {Time.time}s {body.position.y}m", gameObject);
 			if (peak < body.position.y - 0.5f)
 			{
 				peak = body.position.y - 0.5f;
