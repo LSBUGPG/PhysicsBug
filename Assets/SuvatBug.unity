@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 750923580}
   - component: {fileID: 750923581}
   m_Layer: 0
-  m_Name: CorrectSuvat
+  m_Name: SUVAT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c088f4d9812c67439ea60d960cfbd8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correct: 1
   body: {fileID: 750923581}
 --- !u!54 &750923581
 Rigidbody:
@@ -482,10 +481,10 @@ GameObject:
   - component: {fileID: 1794046896}
   - component: {fileID: 1794046895}
   - component: {fileID: 1794046894}
-  - component: {fileID: 1794046898}
   - component: {fileID: 1794046899}
+  - component: {fileID: 1794046900}
   m_Layer: 0
-  m_Name: IncorrectSuvat
+  m_Name: UnityPhysicsCorrected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,20 +576,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1794046898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794046893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c088f4d9812c67439ea60d960cfbd8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correct: 0
-  body: {fileID: 1794046899}
 --- !u!54 &1794046899
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -613,11 +598,25 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1794046900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794046893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a978ea88e0ac9ea47a46550d1096625f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 1794046899}
+  corrected: 1
 --- !u!1 &1814818550
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 2049572977}
+  corrected: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

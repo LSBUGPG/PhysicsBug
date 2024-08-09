@@ -52,5 +52,6 @@
         "Temp/": true
     },
 	"dotnet.defaultSolution": "PhysicsBug.sln",
-	"editor.insertSpaces": false
+    "editor.insertSpaces": false,
+    "editor.codeLens": false
 }
